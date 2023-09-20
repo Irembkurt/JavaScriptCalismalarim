@@ -1,0 +1,28 @@
+<!-- -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <script>
+            // değişkenleri tanımlama
+            var r, alan, cevre, pi=3.14;
+
+            // yarıçap bilgisini kullanıcıdan alma
+            r = Number(prompt("Yarıçap: "));
+
+            // alan ve çevre hesaplama
+            if (r<0)
+            {
+                alert("Lütfen pozitif bir deper giriniz.")
+            }
+            else
+            {
+                alan = pi*r*r;
+                cevre = 2*pi*r;
+                alert("Dairenin alanı = " + alan + "Dairenin çevresi = " + cevre);
+            }
+        </script>
+    </body>
+</html>

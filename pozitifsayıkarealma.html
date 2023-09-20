@@ -1,0 +1,23 @@
+<!-- Sadece pozitif sayıların karesini alan uygulama -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pozitif Sayının Karesi</title>
+    </head>
+    <body>
+        <script>
+            var sayi, kare;
+            sayi = Number(prompt("Sayı giriniz:"));
+            if (sayi < 0) 
+                {
+                    alert("Sayı Negatif!");
+                    alert("F5 ile ekranı tazeleyerek yeni sayı alın.");
+                }
+            else
+                {
+                    kare=sayi*sayi;
+                    alert("Sayının karesi = "+ kare)
+                }
+        </script>
+    </body>
+</html>

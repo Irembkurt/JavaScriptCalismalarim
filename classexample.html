@@ -1,0 +1,29 @@
+<!-- Dikdörtgenin genişliğini ve yüksekliğini kullanıcıdan alarak alanını
+     ve çevresini hesaplama uygulaması-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <script>
+
+            //sınıf oluştur
+            class Dikdörtgen{
+                static genislik = 0
+                static yukseklik = 0
+
+                alan(){
+                    return(this.genislik*this.yukseklik);
+                }
+            }
+
+            //nesne oluştur
+            var d1 = new Dikdörtgen();
+            d1.genislik = Number(prompt("Genişlik: "));
+            d1.yukseklik = Number(prompt("Yükseklik: "));
+            document.write("d1 alan = "+d1.alan());
+
+        </script>
+    </body>
+</html>

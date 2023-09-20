@@ -1,0 +1,25 @@
+<!-- bir dikdörtgenin alan ve çevresini hesaplama -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Dikdörtgenin Alan ve Çevresi</title>
+    </head>
+    <body>
+        <script>
+            // değişkenleri tanımla
+            var genislik, yukseklik, alan, cevre;
+
+            // genişlik ve yükseklik bilgilerini kullanıcıdan al
+            genislik = Number(prompt("Genişlik:"));
+            yukseklik = Number(prompt("Yükseklik:"));
+
+            // dikdörtgenin alan ve çevresini hesaplama
+            alan = genislik*yukseklik;
+            cevre = 2*(genislik+yukseklik);
+
+            // işlem sonucunu ekrana yazdırma
+            alert("Alan: " + alan + " Çevre: " + cevre);
+
+        </script>
+    </body>
+</html>

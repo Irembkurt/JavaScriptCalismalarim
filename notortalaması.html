@@ -1,0 +1,24 @@
+<!-- Not ortalaması hesaplayan program -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Not Ortalaması</title>
+    </head>
+    <body>
+        <script>
+            var vize1, vize2, final, ort;
+            vize1 = Number(prompt("1.Vize notunuzu giriniz:"));
+            vize2 = Number(prompt ("2. Vize notunuzu giriniz:"));
+            final = Number(prompt("Final notunuzu giriniz:"));
+
+            ort = (((vize1+vize2)/2)*0.4)+(final*0.6);
+
+            if(ort>=50 && final>=50)
+                document.write("Tebrikler Geçtiniz.");
+		    else if (ort>=50 && final<50)
+                document.write("Final notunuz 50'den küçük, kaldınız.");
+		    else
+                document.write("Ortalamanız 50'den küçük, kaldınız.");
+        </script>
+    </body>
+</html>
