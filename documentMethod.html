@@ -1,0 +1,39 @@
+<!-- js document nesnesi ve metotları aracılığıyla html css js kodlarını bir arada 
+    kullanarak yaptığım ampul açıp kapama ve içerik değiştirme uygulaması -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h1 id="headline">First Headline</h1>
+        <p id="first"></p>
+        <p id="second"></p>
+        <img src="bulbon.png" id="bulb" onmouseover="bulboff()" onmouseout="bulbon()">
+        
+        <script>
+            
+            // içerik değiştirme
+            document.getElementById("headline").innerHTML="Last Headline";
+            document.getElementById("first").innerHTML="<b>First Paragraph...</b>";
+            document.getElementById("second").innerText="<i>Second Paragraph...</i>";
+
+            // görselleştirme
+            document.getElementById("headline").style.color="red";
+            document.getElementById("headline").style.fontFamily="Arial";
+
+            // özellik değiştirme
+            var bulbs=document.getElementById("bulb");
+
+            function bulbon(){
+                bulbs.src="bulbon.png";
+            }
+
+            function bulboff(){
+                bulbs.src="bulboff.png";
+            }
+        
+        </script>
+
+    </body>
+</html>
