@@ -1,0 +1,20 @@
+<!-- onload olayı ile tarih öğrenme uygulaması -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body onload="date()">
+        <p id="date"></p>
+    <script>
+        function date(){
+            var an=new Date();
+            var year=an.getFullYear();
+            var month=an.getMonth();
+            var day=an.getDay();
+            var date="Date: "+day+"/"+month+"/"+year;
+            document.getElementById("date").innerHTML=date;
+        }
+    </script>
+    </body>
+</html>
