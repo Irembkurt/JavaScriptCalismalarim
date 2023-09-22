@@ -1,0 +1,33 @@
+<!-- formdan okunan iki sayının toplamı ve ortalaması -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta class="utf-8">
+        <title>Form ile 2 Sayını Toplamı</title>
+    </head>
+    <body>
+        <form>
+            Sayi1:<input type="text" id="sayi1">
+            Sayi2:<input type="text" id="sayi2">
+            Toplam:<span id="toplam"></span>
+            Ortalama:<span id="ortalama"></span>
+            <input type="button" value="Hesapla" onclick="toplama()"> 
+        </form>
+        <script>
+            function toplama(){
+                var sayi1, sayi2, toplam, ortalama; //değişkenleri tanımladım
+                
+                // kullanıcıdan sayıları al
+                sayi1 = Number(document.getElementById("sayi1").value);
+                sayi2 = Number(document.getElementById("sayi2").value);
+
+                toplam=sayi1+sayi2; //sayıların toplamını hesapla
+                ortalama=toplam/2;
+
+                // işlem sonucunu ekrana yazdır
+                document.getElementById("toplam").innerHTML = toplam;
+                document.getElementById("ortalama").innerHTML = ortalama;
+            }
+        </script>
+    </body>
+</html>

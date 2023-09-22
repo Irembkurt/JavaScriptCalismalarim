@@ -1,0 +1,22 @@
+<!-- formdan okunan sayının karesini alma -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Formdan Alınan Bir Sayının Karesini Hesaplama</title>
+    </head>
+    <body>
+        <form>
+            Sayi:<input type="text" id="sayi">
+            Karesi: <span id="sonuc"></span>  <!-- span etiketi görünmez boş bir kutu oluşturuyor-->
+            <input type="button" value="Hesapla" onclick="karesi()">
+        </form>
+        <script>
+            function karesi(){
+                var sayi = Number(document.getElementById("sayi").value);
+                var kare = sayi*sayi;
+                document.getElementById("sonuc").innerHTML = kare;
+            }
+        </script>
+    </body>
+</html>
