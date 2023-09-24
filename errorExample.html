@@ -31,7 +31,7 @@
                     if(dersnotu<0 || dersnotu>10) throw "Ders notu 0-10 arası olmalı!"; // || = veya
                 }
                 catch(err){
-                    hatailetisi.innerHTML="hata:"+err;
+                    hatailetisi.innerHTML="hata:"+err;  //err.message ı throw komutu yoksa kullanıyoruz throw varken kullanırsak hata verir
                 }
 
                 //hata olsa da olmasa da aşağıdaki kodlar çalışsın
