@@ -1,0 +1,45 @@
+<!-- JavaScript hata yönetimi örneği (try,catch ve throw komutları) -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <h2>Form ile Throw Uygulaması</h2>
+        <form>
+            Ders Notu:<input type="text" id="dersnotu"><br>
+            <input type="button" value="Kontrol Et" onclick="kontrol()">
+        </form>
+        <p id="hatailetisi"></p>
+        <p id="girilendeger"></p>
+        <script>
+            function kontrol(){
+                var dersnotu, hatailetisi;
+
+                //önceki işlemden kalan hata iletisi varsa silelim
+                hatailetisi=document.getElementById("hatailetisi");
+                hatailetisi.innerHTML="";
+
+                //ders notunu alalım
+                dersnotu=document.getElementById("dersnotu").value;
+
+                //hata denetimi yapalım
+                try{
+                    if(dersnotu == "") throw "Ders notu girilmemiş! ";
+                    if(isNaN(dersnotu)) throw "Sayısal değer girilmemiş!";
+                    dersnotu=Number(dersnotu);
+                    if(dersnotu<0 || dersnotu>10) throw "Ders notu 0-10 arası olmalı!"; // || = veya
+                }
+                catch(err){
+                    hatailetisi.innerHTML="hata:"+err;
+                }
+
+                //hata olsa da olmasa da aşağıdaki kodlar çalışsın
+                //girilen değer yazdırılsın
+                finally{
+                    document.getElementById("girilendeger").innerHTML="girilendeger:"+dersnotu;
+                }
+            }
+        </script>
+    </body>
+</html>
