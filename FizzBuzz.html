@@ -1,0 +1,40 @@
+<!-- 1'den n'e kadar olan sayılarda 3 ve 3ün katı olanda 'fizz'
+     5 ve 5in katı olanlara 'Buzz' her ikisinin de katı olanlarda
+    'FizzBuzz' ve hiçbir koşulu sağlamayan sayıların kendisini ekrana yazdıran program-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FizzBuzz Example</title>
+    </head>
+    <body>
+        <script>
+            //değişkenleri tanımla
+            var n, i;
+
+            //n değerini kullanıcıdan al
+            n = Number(prompt('Sayı giriniz: '));
+
+            //döngümüzü kuralım
+            for (i = 1; i <= n; i++){
+                
+                //FizzBuzz yazdırmak için 3 ve 5in katı
+                if ((i % 3 == 0) && (i % 5 == 0)){
+                    console.log("FizzBuzz")
+                }
+                //Fizz yani 3 ün katı
+                else if (i % 3 == 0){
+                    console.log("Fizz")
+                }
+                //Buzz yani 5in katı
+                else if (i % 5 == 0){
+                    console.log("Buzz")
+                }
+                //Hiçbir koşulu karşılaıyorsa sayıyı yazdır
+                else {
+                    console.log(i)
+                }
+            }
+
+        </script>
+    </body>
+</html>
